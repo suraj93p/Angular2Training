@@ -1,0 +1,37 @@
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+    <table>
+        <tr>
+            <td>First name:</td>
+            <td><input type="text" name="firstname" ngModel></td>
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            <td><input type="text" name="lastname" ngModel></td>
+        </tr>
+        <tr>
+            <td>Street:</td>
+            <td><input type="text" name="street" ngModel></td>
+        </tr>
+        <tr>
+            <td>Zip:</td>
+            <td><input type="number" name="zip" ngModel></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" name="city" ngModel></td>
+        </tr>
+    <br>
+        <!--{{form.firstName}}<br>{{form.lastName}}<br>{{form.street}}<br>{{form.zip}}<br>{{form.city}}-->
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+<h5>Debug: </h5>
+<pre>{{form.value | json}}    </pre>
+
+<h5>Submitted: </h5>
+<pre> {{value | json }}  </pre>
+
+<aside>Use of custom pipe: 2<sup>4</sup> = {{2 | powerOf:4}}</aside>

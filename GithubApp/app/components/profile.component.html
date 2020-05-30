@@ -1,0 +1,26 @@
+<div class="profileContainer">
+    <header class="nameBar">
+        {{_user.Title | json}}
+    </header>
+    <span class="imageContainer">
+        <img src="{{_user.Poster | json}}"/>
+    </span>
+    <button type="submit" class="viewProfileBtn">View Profile</button>
+    <table class="userDetails">
+        <tr>
+            Username:{{_user.Genre | json}}
+        </tr>
+        <tr>
+            Location:{{_user.Country | json}}
+        </tr>
+        <tr>
+            Email:{{_user.Type | json}}
+        </tr>
+        <tr>
+            Blog:{{_user.imdbRating | json}}
+        </tr>
+        <tr>
+            Member Since:{{_user.Released | json}}
+        </tr>
+    </table>
+</div>
